@@ -1,0 +1,25 @@
+﻿<div class="row">
+    <div class="col-md-4 mx-auto">
+        <EditForm Model="Form" OnValidSubmit="Save">
+            <DataAnnotationsValidator />
+            <div class="form-group">
+                <label id="Nom" class="control-label"></label>
+                <InputText id="Nom" @bind-Value="Form.Nom" class="form-control" />
+                <ValidationMessage For="() => Form.Nom" />
+            </div>
+            <div class="form-group">
+                <label for="Prenom" class="control-label"></label>
+                <InputText id="Prenom" @bind-Value="Form.Prenom" class="form-control" />
+                <ValidationMessage For="() => Form.Prenom" />
+            </div>
+            <div class="form-group">
+                <label for="Anniversaire" class="control-label"></label>
+                <InputDate id="Anniversaire" @bind-Value="Form.Anniversaire" class="form-control" />
+                <ValidationMessage For="() => Form.Anniversaire" />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Create</button>
+            </div>
+        </EditForm>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+﻿<div class="card border-1">
+    <div class="card-body text-center">
+        <label class="form-control-plaintext">Id : @Entity.Id</label>
+        <label class="form-control-plaintext">Nom : @Entity.Nom</label>
+        <label class="form-control-plaintext">Prenom : @Entity.Prenom</label>
+        <a href="/Details/@Entity.Id" class="btn btn-secondary">Details</a>
+        <button class="btn btn-danger" @onclick="Delete">Delete</button>
+    </div>
+</div>

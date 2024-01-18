@@ -1,0 +1,29 @@
+﻿@page "/Details/{ContactId:int}"
+
+<h3>Details</h3>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nom
+        </dt>
+        <dd class="col-sm-10">
+            @Entity.Nom
+        </dd>
+        <dt class="col-sm-2">
+            Prenom
+        </dt>
+        <dd class="col-sm-10">
+            @Entity.Prenom
+        </dd>
+        <dt class="col-sm-2">
+            Anniversaire
+        </dt>
+        <dd class="col-sm-10">
+            @Entity.Anniversaire)
+        </dd>
+    </dl>
+</div>
+
+<a href="/Edit/@Entity.Id" class="btn btn-secondary">Edit</a> | <a href="/" class="btn btn-secondary">Back To List</a>

@@ -1,0 +1,20 @@
+﻿@page "/"
+
+<PageTitle>Gest Contact</PageTitle>
+
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <h1 class="h1 text-center">Gestion de contacts</h1>
+    </div>
+</div>
+<AddContact NewContactCreated="NewContactCreated" />
+<hr />
+
+<div class="row">
+    @foreach (Contact contact in Contacts)
+    {
+        <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 m-auto">
+            <DisplayContact Entity="contact" OnDeleteClick="Delete"></DisplayContact>
+        </div>
+    }
+</div>
